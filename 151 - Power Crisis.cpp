@@ -4,13 +4,6 @@
 https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=87
 
 *******************************************************************************/
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <iostream>
 #include <vector>
@@ -45,12 +38,12 @@ int main()
         // for(i = 0 ; i< n; i++)
         //     cout << regions[i] << " ";
         //cout << "\n";
-        
+      
         for(m = 1 ; m<= n; m++){
             int end = josphus( n , m); //return index
             if( regions[end] + 1  == 13){
                 //cout << regions[end] + 1 << "\n";  // cout lest regions
-                cout << m; // smallest m th 
+                cout << m<< endl; // smallest m th 
                 break;
             }
         }
