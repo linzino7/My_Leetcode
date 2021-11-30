@@ -1,7 +1,7 @@
 /******************************************************************************
-
 151 - Power Crisis
 https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=87
+https://blog.csdn.net/u011500062/article/details/72855826
 
 *******************************************************************************/
 
@@ -21,13 +21,13 @@ int josphus(int n, int m){
 
 int main()
 {   
-    
     int n;  
     vector<int> regions;
     int i,m;
     
     while(cin>>n && n!=0){
-        
+    	regions.clear(); // don't forget
+    	
         // -1 mean first we don't count; 
         n=n-1;
         
@@ -38,8 +38,9 @@ int main()
         // for(i = 0 ; i< n; i++)
         //     cout << regions[i] << " ";
         //cout << "\n";
-      
-        for(m = 1 ; m<= n; m++){
+      	
+      	// it's passable that m is bigger than n. ex: 45 54
+        for(m = 1 ; m<= 999; m++){ 
             int end = josphus( n , m); //return index
             if( regions[end] + 1  == 13){
                 //cout << regions[end] + 1 << "\n";  // cout lest regions
@@ -48,10 +49,7 @@ int main()
             }
         }
         
-        
     }
     
     return 0;
 }
-
-
