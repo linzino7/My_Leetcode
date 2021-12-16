@@ -26,7 +26,7 @@ int main(){
             for(int j = 0; j< b.size()+1; j++){
                 if(i == 0 || j ==0){
                     L[i][j] = 0;
-                }else if(a[i+1]== b[j+1]){
+                }else if(a[i]== b[j]){
                     L[i][j] = L[i-1][j-1]+1;
                 }else if (L[i-1][j]> L[i][j-1]){
                     L[i][j] = L[i-1][j];
